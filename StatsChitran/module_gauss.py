@@ -16,7 +16,7 @@ def gauss(x: List[float], amp: float = None, mu: float = 0.0, sig: float = 1.0, 
     :param amp: The amplitude of the gaussian, only expected if probability is false(Statistical distribution and not a probability distribution). Providing this value when probability is True throws an error
     :param mu: The mean of the gaussian. Defaults to zero
     :param sig: The standard deviation of the gaussian, defaults to 1
-    :param probability: True for a probability distribution, False for a probability distribution. Defaults to False.
+    :param probability: True for a probability distribution, False for a statistical distribution. Defaults to False.
     :return: list[float]
     :Example:
     >>> #import the necessary libraries
