@@ -180,7 +180,7 @@ class Vec:
     def scale(self, cons):
         """
         Function defines a constant scaling multiplication for entire list like Vec object
-        :param cons:
+        :param cons: a scalar constant of type int or float
         :return: a list like object(class: Vec) as a result of the scaling
         Examples
         ---------
@@ -198,6 +198,28 @@ class Vec:
             raise ValueError('The cons term needs to be of type int or float in the scale operation')
         return Vec(self.w)
 
+    #defines the shift operator
+    def shift(self, cons):
+        """
+        Function defines a constant translational shifting for entire list like Vec object
+        :param cons: a scalar constant of type int or float
+        :return: a list like object(class: Vec) as a result of the scaling
+        Examples
+        ---------
+        ##define a Vec object and check shift operation
+        >>> v1 = Vec([1, 2, 3])
+        >>> v2 = 1
+        >>> v3 = Vec.shift(v1, 1)
+        >>> print(v3[1], v3[2], v3[3])
+        2 3 4
+        """
+        if isinstance(cons, int) | isinstance(cons, float) == True:
+            self.w = [cons]*self.n
+            self.w = Vec(self.w)
+            self.w = self.w + Vec(self.dat)
+            return self.w
+        else:
+            raise ValueError('cons has to be a scalar of type int or float')
     #defines the subset operator
     def subset(self, start: int, end: int):
         """
