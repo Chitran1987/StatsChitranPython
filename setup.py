@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='StatsChitran',  # Name of your package
-    version='0.3.7',  # Package version
+    version='0.3.8',  # Package version
     packages=find_packages(),  # Automatically find sub-packages
     install_requires=[
         "numpy",
